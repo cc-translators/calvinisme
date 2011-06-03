@@ -3,7 +3,7 @@ PDFX_NAME=$(BOOK_NAME)_pdfx_1a
 LINENO_PATT=\\pagewiselinenumbers
 TEXINPUTS=bibleref:
 TODAY=$(shell date --iso)
-TARGETS=$(BOOK_NAME) $(BOOK_NAME)_numbered 
+TARGETS=$(BOOK_NAME)
 FTP_TOPDIR=calvary
 FTP_PDFDIR=$(FTP_TOPDIR)/pdf
 FTP_JSONDIR=$(FTP_TOPDIR)/json
@@ -14,7 +14,7 @@ include ~/.crocodoc.conf
 
 all: pdf
 
-pdf: split split_numbered $(addsuffix .pdf,$(TARGETS))
+pdf: $(addsuffix .pdf,$(TARGETS))
 
 ebooks: mobi epub
 
