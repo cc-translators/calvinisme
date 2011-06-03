@@ -1,0 +1,68 @@
+% Pocket book
+\documentclass[paper=a4,pagesize=pdftex,12pt,DIV=8]{scrartcl}
+
+\usepackage[french]{babel} %language selection
+\selectlanguage{french}
+
+\usepackage[utf8x]{inputenc}
+
+\usepackage[breaklinks=true,unicode=true]{hyperref}
+\hypersetup{colorlinks,
+           citecolor=black,
+           filecolor=black,
+           linkcolor=black,
+           urlcolor=black,
+           bookmarksopen=true,
+           pdfpagelayout=twopageright,
+           pdfauthor={chuck smith},
+           pdftitle={sagesse pour aujourd'hui},
+           pdftex}
+\usepackage{url}
+
+\usepackage[activate={true,nocompatibility}]{microtype}
+
+\usepackage[T1]{fontenc}
+\usepackage{libertine}
+
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+
+% ref index
+\newcommand{\indextitle}{Index des références bibliques}
+\usepackage{imakeidx}
+\makeindex[title=\indextitle,intoc,options=-s bibleref.ist,columns=2]
+
+% bibleref settings
+\usepackage{bibleref-french-colombe}
+
+\usepackage{review}
+
+% sections
+\usepackage{titlesec}
+
+% cadratin
+\newcommand*{\ocadr}{\mbox{---}\nobreak\,\nobreak}
+\newcommand*{\fcadr}{\unskip\nobreak\,\nobreak{}---}
+
+\newcommand{\signature}[1]{%
+\vspace{1cm}\parbox{3in}{\raggedleft{\large\emph{#1}}}
+}
+
+\title{Calvinisme, Arminianisme et la Parole de Dieu}
+\author{Chuck Smith}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\input{introduction}
+
+\titleformat{\section}%
+  {\bfseries\itshape\large}{}{10pt}%
+  {Section~\thesection~: }
+
+\input{section1}
+\input{section2}
+\input{section3}
+
+\end{document}

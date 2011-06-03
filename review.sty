@@ -1,0 +1,34 @@
+\ProvidesPackage{review}
+\let\review@disable\@empty
+\let\review@dateinlist\@empty
+\DeclareOption{disable}{\def\review@disable{true}}
+\DeclareOption{dateinlist}{\def\review@dateinlist{true}}
+\ProcessOptions
+
+
+\ifx\review@disable \@empty
+  \usepackage[french,colorinlistoftodos,textsize=small]{todonotes}
+  \ifx\review@dateinlist \@empty
+  \else
+    \renewcommand{\addcontentsline}[3]{%
+      \addtocontents{#1}{\protect\contentsline{#2}{#3}{\tododate}{section.\thechapter.\thesection}}
+    }
+  \fi
+\else
+  \usepackage[french,colorinlistoftodos,textsize=small,disable]{todonotes}
+\fi
+
+% Use option 'disable' to remove annotations
+\newcommand{\fixme}[2][]{%
+   \todo[#1]{Correction~: #2}}
+\newcommand{\suggest}[2][]{%
+   \todo[color=green!40,#1]{Suggestion~: #2}}
+\newcommand{\grammar}[2][]{%
+   \todo[color=blue!40,#1]{Grammaire~: #2}}
+\newcommand{\missing}[2][]{%
+   \todo[color=yellow!50,#1]{Manque~: #2}}
+\newcommand{\punct}[2][]{%
+   \todo[color=purple!50,#1]{Ponctuation~: #2}}
+\newcommand{\typo}[2][]{%
+   \todo[color=red!50, #1]{Coquille~: #2}}
+
