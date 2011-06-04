@@ -1,5 +1,5 @@
 % Pocket book
-\documentclass[paper=a5,pagesize=pdftex,12pt]{scrartcl}
+\documentclass[paper=a5,pagesize=pdftex,12pt]{scrbook}
 
 \usepackage[french]{babel} %language selection
 \selectlanguage{french}
@@ -38,9 +38,28 @@
 
 % headers/footers
 \usepackage{scrpage2}
+
+\automark[section]{section}
+
 \setheadsepline{.4pt}
-\automark{section}
+
 \pagestyle{scrheadings}
+
+\renewcommand*{\thesection}{\arabic{section}}
+
+% lettrines
+\usepackage{type1cm} % scalable fonts
+\usepackage{lettrine}
+\usepackage{xcolor}
+\renewcommand{\LettrineFontHook}{\color[gray]{0.7}}
+\newcommand{\mylettrine}[3][]{
+  \ifpdf
+    \lettrine[lines=2,lhang=0.33,loversize=0.25,#1]{#2}{#3}
+  \else
+    #2#3
+  \fi
+}
+
 
 % sections
 \usepackage{titlesec}
