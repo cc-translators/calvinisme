@@ -51,7 +51,7 @@
 \usepackage{type1cm} % scalable fonts
 \usepackage{lettrine}
 \usepackage{xcolor}
-\renewcommand{\LettrineFontHook}{\color[gray]{0.7}}
+\renewcommand{\LettrineFontHook}{\color[gray]{0.5}}
 \newcommand{\mylettrine}[3][]{
   \ifpdf
     \lettrine[lines=2,lhang=0.33,loversize=0.25,#1]{#2}{#3}
@@ -77,7 +77,8 @@
 
 \begin{document}
 
-\maketitle
+\input{title}
+%\maketitle
 \tableofcontents
 
 \input{introduction}
