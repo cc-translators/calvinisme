@@ -1,74 +1,9 @@
 % Pocket book
 \documentclass[paper=a5,pagesize=pdftex,12pt]{scrbook}
 
-\usepackage[french]{babel} %language selection
-\selectlanguage{french}
-
-\usepackage[utf8x]{inputenc}
-
-\usepackage[breaklinks=true,unicode=true]{hyperref}
-\hypersetup{colorlinks,
-           citecolor=black,
-           filecolor=black,
-           linkcolor=black,
-           urlcolor=black,
-           bookmarksopen=true,
-           pdfpagelayout=twopageright,
-           pdfauthor={chuck smith},
-           pdftitle={Calvinisme, Arianisme et Parole de Dieu},
-           pdftex}
-\usepackage{url}
-
-\usepackage[activate={true,nocompatibility}]{microtype}
-
-\usepackage[T1]{fontenc}
-\usepackage{libertine}
-
-\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
-
-% ref index
-\newcommand{\indextitle}{Index des références bibliques}
-\usepackage{imakeidx}
-\makeindex[title=\indextitle,intoc,options=-s bibleref.ist,columns=2]
-
-% bibleref settings
-\usepackage{bibleref-french-colombe}
+\usepackage{calvinisme}
 
 \usepackage[disable]{review}
-
-% headers/footers
-\usepackage{scrpage2}
-
-\automark[section]{section}
-
-\setheadsepline{.4pt}
-
-\pagestyle{scrheadings}
-
-\renewcommand*{\thesection}{\arabic{section}}
-
-% lettrines
-\usepackage{type1cm} % scalable fonts
-\usepackage{lettrine}
-\usepackage{xcolor}
-\renewcommand{\LettrineFontHook}{\color[gray]{0.5}}
-\newcommand{\mylettrine}[3][]{
-  \lettrine[lines=2,lhang=0.33,loversize=0.25,#1]{#2}{#3}
-}
-
-
-% sections
-\usepackage{titlesec}
-
-% cadratin
-\newcommand*{\ocadr}{\mbox{---}\nobreak\,\nobreak}
-\newcommand*{\fcadr}{\unskip\nobreak\,\nobreak{}---}
-
-\newcommand{\signature}[1]{%
-\vspace{1cm}\parbox{3.5in}{\raggedleft{\large\emph{#1}}}
-}
-
-\usepackage{pdfpages}
 
 \title{Calvinisme, Arminianisme et Parole de Dieu}
 \author{Chuck Smith}
