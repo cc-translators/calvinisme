@@ -1,0 +1,4 @@
+% options per letter
+\LettrineOptionsFor{L}{lraise=0.15,findent=-0.2em}
+\LettrineOptionsFor{Q}{lraise=0.30,loversize=0.15}
+
