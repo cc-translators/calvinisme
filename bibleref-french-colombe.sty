@@ -2,6 +2,11 @@
 
 % bibleref settings
 \usepackage{bibleref-french}
+
+\usepackage{etoolbox}
+\patchcmd{\@bible@verse}{\@bv@idxsort{\csname br@#1\endcsname}}{\@bv@idxsort{#1}}
+
+
 \AtBeginDocument{\shorthandoff{:}}
 % Redefine chapter/verse separator
 \renewcommand*{\BRchvsep}{.}%
@@ -19,18 +24,21 @@
   \let\@bv@current@versestyle\BRversestyle
   \let\@bv@current@bkchsep\BRbkchsep
   \let\@bv@current@chvsep\BRchvsep
+  \let\@bv@current@vrsep\BRvrsep
   \def\@bv@restore{%
     \let\BRbooktitlestyle\@bv@current@titlestyle
     \let\BRchapterstyle\@bv@current@chapterstyle
     \let\BRversestyle\@bv@current@versestyle
     \let\BRbkchsep\@bv@current@bkchsep
     \let\BRchvsep\@bv@current@chvsep
+    \let\BRvrsep\@bv@current@vrsep
   }%
   \def\BRbooktitlestyle##1{}%
   \def\BRchapterstyle##1{}%
   \def\BRversestyle##1{}%
   \def\BRbkchsep{}%
   \def\BRchvsep{}%
+  \def\BRvrsep{}%
   \def\@bv@idxpgformat{#1}%
   \@bv@idxtrue\def\@bv@idxentry{}\@bible@verse
 }
@@ -112,6 +120,17 @@
 \biblerefmap{IIIJn}{\bridxNT 64}
 \biblerefmap{Jude}{\bridxNT 65}
 \biblerefmap{Ap}{\bridxNT 66}
+
+
+% Proper hyphentation
+\renewcommand*{\BRbkchsep}{~}%
+\renewcommand*{\BRvrsep}{\mbox{--}\nobreak}%
+
+% Allow hyphenation between book and chapter
+\newcommand{\BRallowhypbch}{\renewcommand*{\BRbkchsep}{ }}
+% Forbid hyphenation between book and chapter
+\newcommand{\BRforbidhypbch}{\renewcommand*{\BRbkchsep}{~}}
+
 
 
 
