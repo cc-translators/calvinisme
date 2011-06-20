@@ -70,7 +70,16 @@
   }%
   {{}{}{}} % Nothing in footer
 
+\defpagestyle{introend}%
+  {%
+    {Introduction\hfill}
+    {\hfill{}Introduction}
+    {}
+  }%
+  {{}{}{}} % Nothing in footer
+
 \newcommand{\closechapter}{\thispagestyle{chapterend}}
+\newcommand{\closeintro}{\thispagestyle{introend}}
 
 \setheadsepline{.4pt}
 
