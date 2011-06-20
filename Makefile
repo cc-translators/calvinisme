@@ -76,7 +76,7 @@ endif
 spellcheck:
 	find chapters/fr -name "*.tex" -exec aspell -l fr -c {} \;
 
-crocupload: $(BOOK_NAME).json 
+crocupload: $(BOOK_NAME).json $(BOOK_NAME)_pocket.json
 clean:
 	rm -f *.ps *.aux *.log *.out *.lol
 	rm -f *.idx *.ind *.ilg *.toc *.dvi
