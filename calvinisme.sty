@@ -3,7 +3,11 @@
 \usepackage[french]{babel} %language selection
 \selectlanguage{french}
 
-\usepackage[utf8x]{inputenc}
+%\usepackage[utf8x]{inputenc}
+% Set fonts
+\usepackage{fontspec}
+\usepackage{xunicode}
+\setmainfont[Mapping=tex-text]{Linux Libertine O}
 
 \usepackage[breaklinks=true,unicode=true]{hyperref}
 \hypersetup{colorlinks,
@@ -18,17 +22,17 @@
            pdftex}
 \usepackage{url}
 
-\usepackage[activate={true,nocompatibility}]{microtype}
+\usepackage[protrusion=true,final]{microtype}
 
-\usepackage[T1]{fontenc}
-\usepackage{libertine}
+%\usepackage[T1]{fontenc}
+%\usepackage{libertine}
 
 \setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
 
 % ref index
 \newcommand{\indextitle}{Index des références bibliques}
 \usepackage{imakeidx}
-\indexsetup{level=\section*}
+\indexsetup{level=\chapter*}
 \makeindex[title=\indextitle,intoc,options=-s bibleref.ist,columns=2]
 
 % bibleref settings
@@ -37,13 +41,55 @@
 % headers/footers
 \usepackage{scrpage2}
 
-\automark[section]{section}
+% Get title
+\makeatletter
+\let\titlehead\@title
+\makeatother
+
+% Define \chaphead to be used in section headings
+\let\oldchapter\chapter
+\newcommand\temphead{}
+\newcommand\chaphead{}
+\renewcommand\chapter[2][\temphead]{%
+    \cleardoublepage
+    \renewcommand\temphead{#2}%
+    \ifx #1 \@empty
+       \renewcommand\chaphead{#2}%
+    \else
+       \renewcommand\chaphead{#1}%
+    \fi
+    \oldchapter[#1]{#2}}
+
+\automark[chapter]{chapter}
+
+\defpagestyle{chapterend}%
+  {%
+    {\thechapter~\chaphead\hfill}
+    {\hfill\thechapter~\chaphead}
+    {}
+  }%
+  {{}{}{}} % Nothing in footer
+
+\newcommand{\closechapter}{\thispagestyle{chapterend}}
 
 \setheadsepline{.4pt}
 
 \pagestyle{scrheadings}
 
-\renewcommand*{\thesection}{\arabic{section}}
+\renewcommand*{\thechapter}{\arabic{chapter}}
+
+% Set index
+\newcommand{\chindex}{%
+  % Restore normal chapters
+  \let\chapter\oldchapter
+  \titleformat{\chapter}%
+    {\centering\chapstyle}{}{10pt}%
+    {}%
+    [\vspace{8mm}]
+  \renewcommand*{\BRbooktitlestyle}[1]{\textbf{\emph{##1}}}
+  \cleardoublepage
+  \printindex
+}
 
 % lettrines
 \usepackage{type1cm} % scalable fonts
@@ -51,16 +97,26 @@
 \usepackage{xcolor}
 \renewcommand{\LettrineFontHook}{\color[gray]{0.5}}
 
+% Define specialpar environment to fix hyphenation issues
+% Sample usage:
+%   \begin{specialpar}{\tolerance=274 \BRallowhypbch}
+% or
+%   \begin{specialpar}{\emergencystretch=1.5em}
+\newenvironment{specialpar}[1]{\par#1}{\par}
 
 % sections
 \usepackage{titlesec}
+\newcommand{\chapstyle}{\bfseries\itshape\huge}
 
 % cadratin
 \newcommand*{\ocadr}{\mbox{---}\nobreak\,\nobreak}
 \newcommand*{\fcadr}{\unskip\nobreak\,\nobreak{}---}
 
 \newcommand{\signature}[1]{%
-\vspace{1cm}\parbox{3.5in}{\raggedleft{\large\emph{#1}}}
+\vspace{1cm}\parbox{2.5in}{\raggedleft{\large\emph{#1}}}
 }
+
+\newcommand{\pocketlinebreak}{}
+\newcommand{\pocketpagebreak}{}
 
 \usepackage{pdfpages}

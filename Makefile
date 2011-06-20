@@ -1,7 +1,7 @@
 BOOK_NAME=calvinisme
 PDFX_NAME=$(BOOK_NAME)_pdfx_1a
 LINENO_PATT=\\pagewiselinenumbers
-TEXINPUTS=bibleref:
+TEXINPUTS=microtype:
 TODAY=$(shell date --iso)
 TARGETS=title_standalone $(BOOK_NAME) $(BOOK_NAME)_review
 FTP_TOPDIR=calvary
@@ -28,8 +28,8 @@ json: pdf $(addsuffix .json,$(TARGETS))
 	sed -e 's@%$(LINENO_PATT)@$(LINENO_PATT)@' $< > $@
 
 %.pdf: %.tex
-	TEXINPUTS=$(TEXINPUTS) pdflatex -shell-escape -interaction=batchmode $*
-	TEXINPUTS=$(TEXINPUTS) pdflatex -shell-escape -interaction=batchmode $*
+	TEXINPUTS=$(TEXINPUTS) xelatex -shell-escape -interaction=batchmode $*
+	TEXINPUTS=$(TEXINPUTS) xelatex -shell-escape -interaction=batchmode $*
 
 %.dvi: %.tex
 	-TEXINPUTS=$(TEXINPUTS) latex -interaction=batchmode $<

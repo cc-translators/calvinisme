@@ -1,0 +1,68 @@
+% Pocket book
+\documentclass[paper=4.25in:6.87in,pagesize=pdftex,12pt,
+               headinclude=on,footinclude=on]{scrbook}
+\areaset[0.50in]{2.75in}{5.87in}
+
+\title{Calvinisme, Arminianisme et Parole de Dieu}
+\author{Chuck Smith}
+
+\usepackage{calvinisme}
+
+\usepackage{tocloft}
+
+
+\renewcommand\cfttoctitlefont{\hfill\Huge\scshape}
+\renewcommand\cftaftertoctitle{\hfill}
+\renewcommand\cftchappresnum{\scshape Section\ }
+\renewcommand\cftchapaftersnumb{\newline\vspace{-8pt}}
+\renewcommand\cftchapleader{\cftdotfill{1}}
+
+\renewcommand{\pocketlinebreak}{\linebreak}
+\renewcommand{\pocketpagebreak}{\pagebreak}
+
+\usepackage[disable]{review}
+
+\begin{document}
+
+\frontmatter
+\setlength{\parindent}{0em}
+\includepdf{title_standalone.pdf}
+\pagestyle{empty}
+\include{copyright}
+\tableofcontents
+\thispagestyle{empty}
+
+\setlength{\parindent}{1em}
+
+% Debug overfull boxes
+%\overfullrule=1mm
+\tolerance=800
+
+\mainmatter
+\titlespacing{\chapter}%
+  {0pt}{-5mm}{0pt}
+\titleformat{\chapter}%
+  {\chapstyle}{}{10pt}%
+  {}[\vspace{10mm}]
+\pagenumbering{arabic}
+\input{introduction}
+
+\titleformat{\chapter}%
+  {\chapstyle}{}{10pt}%
+  {Section~\thechapter\\ }
+  [\vspace{10mm}]
+
+\cleardoublepage
+\input{section1}
+\input{section2}
+\input{section3}
+
+\backmatter
+\chindex
+%\closechapter
+
+\pagestyle{empty}
+\clearpage
+\mbox{}
+
+\end{document}

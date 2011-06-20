@@ -18,18 +18,21 @@
 % Debug overfull boxes
 \overfullrule=1mm
 
+\titleformat{\chapter}%
+  {\chapstyle}{}{10pt}%
+  {}
 \input{introduction}
 
-\titleformat{\section}%
-  {\bfseries\itshape\large}{}{10pt}%
-  {Section~\thesection~: }
+\titleformat{\chapter}%
+  {\chapstyle}{}{10pt}%
+  {Section~\thechapter\\ }
 
 \input{section1}
 \input{section2}
 \input{section3}
 
-\titleformat{\section}%
-  {\centering\bfseries\large}{}{10pt}%
+\titleformat{\chapter}%
+  {\centering\chapstyle}{}{10pt}%
   {}[\vspace{1mm}]
 \renewcommand*{\BRbooktitlestyle}[1]{\textbf{\emph{#1}}}
 \printindex
