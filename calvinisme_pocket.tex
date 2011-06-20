@@ -39,12 +39,15 @@
 \tolerance=800
 
 \mainmatter
+\pagestyle{scrheadings}
+\lehead[]{Introduction}
+\rohead[]{Introduction}
+\pagenumbering{arabic}
 \titlespacing{\chapter}%
   {0pt}{-5mm}{0pt}
 \titleformat{\chapter}%
   {\chapstyle}{}{10pt}%
   {}[\vspace{10mm}]
-\pagenumbering{arabic}
 \input{introduction}
 
 \titleformat{\chapter}%
@@ -53,6 +56,8 @@
   [\vspace{10mm}]
 
 \cleardoublepage
+\lehead[]{Section~\thechapter\hfill}
+\rohead[]{\hfill\chaphead}
 \input{section1}
 \input{section2}
 \input{section3}

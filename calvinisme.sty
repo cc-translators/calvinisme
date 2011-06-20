@@ -60,12 +60,12 @@
     \fi
     \oldchapter[#1]{#2}}
 
-\automark[chapter]{chapter}
+\renewcommand*{\chapterpagestyle}{scrplain}
 
 \defpagestyle{chapterend}%
   {%
-    {\thechapter~\chaphead\hfill}
-    {\hfill\thechapter~\chaphead}
+    {Section~\thechapter\hfill}
+    {\hfill\chaphead}
     {}
   }%
   {{}{}{}} % Nothing in footer
