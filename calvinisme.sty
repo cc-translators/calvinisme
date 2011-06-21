@@ -113,6 +113,12 @@
 %   \begin{specialpar}{\emergencystretch=1.5em}
 \newenvironment{specialpar}[1]{\par#1}{\par}
 
+% No page finishes with an hyphenated word
+\brokenpenalty=10000
+% Discourage hyphenation on two lines in a row
+\doublehyphendemerits=1000000000
+
+
 % sections
 \usepackage{titlesec}
 \newcommand{\chapstyle}{\bfseries\itshape\huge}
