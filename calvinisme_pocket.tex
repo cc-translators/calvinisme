@@ -28,7 +28,8 @@
 
 \frontmatter
 \setlength{\parindent}{0em}
-\includepdf{title_standalone.pdf}
+%\includepdf{title_standalone.pdf}
+\include{title}
 \pagestyle{empty}
 \include{copyright}
 \tableofcontents
@@ -65,8 +66,10 @@
 \input{section3}
 
 \backmatter
+\lehead[]{Index des références bibliques\hfill}
+\rohead[]{\hfill{}Index des références bibliques}
 \chindex
-%\closechapter
+\closeindex
 
 \pagestyle{empty}
 \clearpage

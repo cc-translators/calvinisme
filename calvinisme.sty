@@ -78,8 +78,17 @@
   }%
   {{}{}{}} % Nothing in footer
 
+\defpagestyle{indexend}%
+  {%
+    {Index des références bibliques\hfill}
+    {\hfill{}Index des références bibliques}
+    {}
+  }%
+  {{}{}{}} % Nothing in footer
+
 \newcommand{\closechapter}{\thispagestyle{chapterend}}
 \newcommand{\closeintro}{\thispagestyle{introend}}
+\newcommand{\closeindex}{\thispagestyle{indexend}}
 
 \setheadsepline{.4pt}
 
