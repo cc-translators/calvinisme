@@ -1,5 +1,14 @@
 % No margins at all
 \documentclass[paper=a5,pagesize=pdftex,DIV=100]{scrbook}
+\usepackage{graphicx}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\setmainfont[Mapping=tex-text]{Linux Libertine O}
+\newfontfamily\logofont{ChopinScript}
+% Bullet
+\usepackage{xcolor}
+\usepackage{xspace}
+\newcommand{\mybullet}{{\color[gray]{0.7}$\bullet$}\xspace}
 
 \begin{document}
 \input{title}
