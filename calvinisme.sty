@@ -122,12 +122,12 @@
 \usepackage{xspace}
 \newcommand{\mybullet}{{\color[gray]{0.7}$\bullet$}\xspace}
 
-% Define specialpar environment to fix hyphenation issues
+% Define pocketpar environment to fix hyphenation issues
 % Sample usage:
-%   \begin{specialpar}{\tolerance=274 \BRallowhypbch}
+%   \begin{pocketpar}{\tolerance=274 \BRallowhypbch}
 % or
-%   \begin{specialpar}{\emergencystretch=1.5em}
-\newenvironment{specialpar}[1]{\par#1}{\par}
+%   \begin{pocketpar}{\emergencystretch=1.5em}
+\newenvironment{pocketpar}[1]{\par#1}{\par}
 
 % No page finishes with an hyphenated word
 \brokenpenalty=10000
