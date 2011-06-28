@@ -19,8 +19,11 @@
 %\renewcommand\cftchapaftersnumb{\newline\vspace{-8pt}}
 \renewcommand\cftchapleader{\cftdotfill{1}}
 
+% Hyphenation tricks
 \renewcommand{\digestlinebreak}{\linebreak}
 \renewcommand{\digestpagebreak}{\linebreak}
+
+\renewenvironment{digestpar}[1]{\par#1}{\par}
 
 \usepackage[disable]{review}
 

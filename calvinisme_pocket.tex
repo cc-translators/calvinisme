@@ -19,8 +19,13 @@
 %\renewcommand\cftchapaftersnumb{\newline\vspace{-8pt}}
 \renewcommand\cftchapleader{\cftdotfill{1}}
 
+
+% Hyphenation tricks
 \renewcommand{\pocketlinebreak}{\linebreak}
 \renewcommand{\pocketpagebreak}{\pagebreak}
+
+\renewenvironment{pocketpar}[1]{\par#1}{\par}
+
 
 \usepackage[disable]{review}
 
@@ -36,7 +41,7 @@
 \setlength{\parindent}{1em}
 
 % Debug overfull boxes
-\overfullrule=1mm
+%\overfullrule=1mm
 \tolerance=800
 
 \mainmatter
