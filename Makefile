@@ -3,7 +3,7 @@ PDFX_NAME=$(BOOK_NAME)_pdfx_1a
 LINENO_PATT=\\pagewiselinenumbers
 TEXINPUTS=microtype:
 TODAY=$(shell date --iso)
-TARGETS=title_standalone $(BOOK_NAME) $(BOOK_NAME)_review $(BOOK_NAME)_pocket
+TARGETS=title_standalone $(BOOK_NAME) $(BOOK_NAME)_review $(BOOK_NAME)_pocket $(BOOK_NAME)_digest
 FTP_TOPDIR=calvary
 FTP_PDFDIR=$(FTP_TOPDIR)/pdf
 FTP_JSONDIR=$(FTP_TOPDIR)/json
@@ -76,7 +76,7 @@ endif
 spellcheck:
 	find chapters/fr -name "*.tex" -exec aspell -l fr -c {} \;
 
-crocupload: $(BOOK_NAME).json $(BOOK_NAME)_pocket.json
+crocupload: $(BOOK_NAME).json $(BOOK_NAME)_pocket.json $(BOOK_NAME)_digest.json
 clean:
 	rm -f *.ps *.aux *.log *.out *.lol
 	rm -f *.idx *.ind *.ilg *.toc *.dvi
