@@ -11,12 +11,13 @@
 \newfontfamily\logofont{ChopinScript}
 \newfontface\pagemarkfont[Numbers={OldStyle}]{Linux Libertine O}
 \newfontfamily\headerfont{Linux Libertine Slanted O}
+\newfontfamily\sigfont{Linux Libertine Slanted O}
 \newfontfamily\lettrinefont{Linux Libertine Initials O}
 %\newfontfamily\lettrinefont{Preciosa}
 %\newfontfamily\lettrinefont{Fancy Pants NF}
 %\newfontfamily\lettrinefont{Precious}
 %\newfontfamily\lettrinefont{Dobkin}
-%\newfontfamily\lettrinefont[Alternate=1]{Humanistic}
+%\newfontfamily\lettrinefont{Humanistic Cursive}
 %\newfontfamily\lettrinefont[Scale=0.5]{Baroque Script}
 
 \usepackage[breaklinks=true,unicode=true]{hyperref}
@@ -154,7 +155,7 @@
 \newcommand*{\fcadr}{\unskip\nobreak\,\nobreak{}---}
 
 \newcommand{\signature}[1]{%
-\vspace{1cm}\parbox{2.5in}{\raggedleft{\large\emph{#1}}}
+\vspace{1cm}\parbox{2.5in}{\sigfont\raggedleft{\large{#1}}}
 }
 
 \newcommand{\pocketlinebreak}{}
