@@ -10,6 +10,13 @@
 \setmainfont[Mapping=tex-text]{Linux Libertine O}
 \newfontfamily\logofont{ChopinScript}
 \newfontface\pagemarkfont[Numbers={OldStyle}]{Linux Libertine O}
+\newfontfamily\lettrinefont{Linux Libertine O}
+%\newfontfamily\lettrinefont{Preciosa}
+%\newfontfamily\lettrinefont{Fancy Pants NF}
+%\newfontfamily\lettrinefont{Precious}
+%\newfontfamily\lettrinefont{Dobkin}
+%\newfontfamily\lettrinefont[Alternate=1]{Humanistic}
+%\newfontfamily\lettrinefont[Scale=0.5]{Baroque Script}
 
 \usepackage[breaklinks=true,unicode=true]{hyperref}
 \hypersetup{colorlinks,
@@ -116,7 +123,7 @@
 \usepackage{type1cm} % scalable fonts
 \usepackage{lettrine}
 \usepackage{xcolor}
-\renewcommand{\LettrineFontHook}{\color[gray]{0.5}}
+\renewcommand{\LettrineFontHook}{\lettrinefont\color[gray]{0.3}}
 
 % Bullet
 \usepackage{xspace}
