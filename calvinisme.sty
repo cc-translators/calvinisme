@@ -10,7 +10,8 @@
 \setmainfont[Mapping=tex-text]{Linux Libertine O}
 \newfontfamily\logofont{ChopinScript}
 \newfontface\pagemarkfont[Numbers={OldStyle}]{Linux Libertine O}
-\newfontfamily\lettrinefont{Linux Libertine O}
+\newfontfamily\headerfont{Linux Libertine Slanted O}
+\newfontfamily\lettrinefont{Linux Libertine Initials O}
 %\newfontfamily\lettrinefont{Preciosa}
 %\newfontfamily\lettrinefont{Fancy Pants NF}
 %\newfontfamily\lettrinefont{Precious}
@@ -49,6 +50,7 @@
 
 % headers/footers
 \usepackage{scrpage2}
+\renewcommand{\headfont}{\headerfont}
 \renewcommand{\pnumfont}{\pagemarkfont}
 
 % Get title
