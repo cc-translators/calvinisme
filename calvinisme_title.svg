@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.1 r9760"
-   sodipodi:docname="calvinisme_title.svg">
+   sodipodi:docname="calvinisme_title.pdf">
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -631,7 +631,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -754,69 +754,65 @@
            sodipodi:role="line">LE POINT DE VUE DE CALVARY CHAPEL</tspan></text>
     </g>
     <g
-       id="g7621"
-       transform="matrix(3.1421768,0,0,3.1421768,-838.15076,-1507.0705)">
-      <g
-         id="g7592"
-         transform="matrix(0.30320023,0,0,0.30320023,308.65398,492.76244)">
-        <flowRoot
-           mask="url(#mask3826-1)"
-           transform="matrix(1.0759387,0,0,1.0759387,-134.28482,100.36812)"
-           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Newtown;-inkscape-font-specification:Newtown"
-           id="flowRoot3773-9"
-           xml:space="preserve"><flowRegion
-             id="flowRegion3775-7"><rect
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Newtown;-inkscape-font-specification:Newtown"
-               y="505.13995"
-               x="148.61111"
-               height="89.351852"
-               width="304.16666"
-               id="rect3777-0" /></flowRegion><flowPara
-             id="flowPara3779-0"><flowSpan
-               id="flowSpan3781-8"
-               style="font-size:30px">HUCK</flowSpan></flowPara></flowRoot>        <text
-           sodipodi:linespacing="125%"
-           id="text3817-0"
-           y="697.82416"
-           x="-3.8831425"
-           style="font-size:43.03754807px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Newtown;-inkscape-font-specification:Newtown"
-           xml:space="preserve"><tspan
-             y="697.82416"
-             x="-3.8831425"
-             id="tspan3819-1"
-             sodipodi:role="line">C</tspan></text>
-      </g>
-      <g
-         id="g7583"
-         transform="matrix(0.30320023,0,0,0.30320023,348.64794,475.67767)">
-        <text
-           inkscape:transform-center-y="3.424737"
-           sodipodi:linespacing="125%"
-           id="text5472-9"
-           y="754.83813"
-           x="-8.181345"
-           style="font-size:43.03754807px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Newtown;-inkscape-font-specification:Newtown"
-           xml:space="preserve"><tspan
-             y="754.83813"
-             x="-8.181345"
-             id="tspan5474-1"
-             sodipodi:role="line">S</tspan></text>
-        <flowRoot
-           mask="url(#mask5546-4)"
-           transform="matrix(1.0759387,0,0,1.0759387,-135.74157,156.97449)"
-           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Newtown;-inkscape-font-specification:Newtown"
-           id="flowRoot3773-0-9"
-           xml:space="preserve"><flowRegion
-             id="flowRegion3775-9-1"><rect
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Newtown;-inkscape-font-specification:Newtown"
-               y="505.13995"
-               x="148.61111"
-               height="89.351852"
-               width="304.16666"
-               id="rect3777-5-8" /></flowRegion><flowPara
-             id="flowPara3779-6-9"><flowSpan
-               id="flowSpan3781-6-2"
-               style="font-size:30px">MITH</flowSpan></flowPara></flowRoot>      </g>
+       transform="matrix(1.0250562,0,0,1.0250562,3.7602997,136.89779)"
+       mask="url(#mask3826-1)"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Newtown;-inkscape-font-specification:Newtown"
+       id="flowRoot3773-9">
+      <path
+         d="m 168.185,555.84392 0,-21.57 -4.5,0 0,8.73 -8.31,0 0,-8.73 -4.53,0 0,21.57 4.53,0 0,-9.03 8.31,0 0,9.03 4.5,0"
+         style="font-size:30px"
+         id="path8751" />
+      <path
+         d="m 189.83562,547.35392 0,-13.08 -4.5,0 c -1e-5,10.52001 -0.32001,16.19001 -0.95999,17.01 -0.72002,0.90001 -2.01002,1.35001 -3.87001,1.35 -1.82,10e-6 -3.11,-0.44999 -3.87,-1.35 -0.62,-0.73999 -0.93,-2.08999 -0.93,-4.05 l 0,-12.96 -4.56,0 0,14.49 c 0,1.12001 0.15,2.07001 0.45,2.85 0.18,0.40001 0.41,0.83001 0.69,1.29 0.3,0.50001 0.6,0.94001 0.9,1.32 0.42,0.50001 1.11,0.92 2.07,1.26 0.7,0.26 1.22,0.4 1.56,0.42 0.4,0.06 0.81,0.09 1.23,0.09 l 2.46,0.09 2.55,-0.12 c 0.43999,0 0.90999,-0.05 1.41,-0.15 l 1.38,-0.42 c 0.95999,-0.34 1.63999,-0.77999 2.04,-1.32 0.87999,-1.19999 1.43998,-2.25999 1.68,-3.18 0.17998,-0.75999 0.26998,-1.93999 0.27,-3.54"
+         style="font-size:30px"
+         id="path8753" />
+      <path
+         d="m 210.55297,555.84392 0,-3.75 -8.67,-0.03 -0.54,-0.03 -0.48,-0.12 c -1.16001,-0.31999 -2.00001,-1.14999 -2.52,-2.49 -0.36001,-1.01999 -0.54001,-2.23999 -0.54,-3.66 -10e-6,-1.31998 0.13999,-2.58998 0.42,-3.81 0.27999,-1.17998 0.75999,-2.10998 1.44,-2.79 0.85999,-0.79998 2.00999,-1.19998 3.45,-1.2 l 7.44,0 0,-3.69 c -5.82001,3e-5 -9.15001,0.06 -9.99,0.18 -0.76001,0.12003 -1.53001,0.31003 -2.31,0.57 -1.32001,0.46002 -2.42001,1.28002 -3.3,2.46 -0.76,1.02002 -1.3,2.23002 -1.62,3.63 -0.32,1.36002 -0.48,3.04002 -0.48,5.04 0,1.96001 0.49,3.80001 1.47,5.52 1.14,2.00001 2.77999,3.27 4.92,3.81 0.06,0.02 0.14999,0.04 0.27,0.06 0.02,0.02 0.1,0.05 0.24,0.09 0.21999,0.06 0.40999,0.09 0.57,0.09 l 0.69,0.03 1.92,0.09 7.62,0"
+         style="font-size:30px"
+         id="path8755" />
+      <path
+         d="m 232.40187,555.84392 -8.73,-11.01 8.67001,-10.56 -5.43001,0 -8.49,10.38 0,-10.38 -4.53,0 0,21.57 4.53,0 0,-10.71 8.19,10.71 5.79,0"
+         style="font-size:30px"
+         id="path8757" />
+    </g>
+    <g
+       style="font-size:41.00224686px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Newtown;-inkscape-font-specification:Newtown"
+       id="text3817-0">
+      <path
+         d="m 153.2935,706.09937 0,-5.12529 -11.84965,-0.041 -0.73804,-0.041 -0.65603,-0.16401 c -1.58543,-0.43735 -2.73349,-1.57174 -3.44419,-3.40319 -0.49204,-1.39406 -0.73805,-3.06148 -0.73804,-5.00227 -1e-5,-1.80408 0.19133,-3.53984 0.57403,-5.20729 0.38268,-1.61273 1.03871,-2.8838 1.96811,-3.8132 1.17538,-1.09337 2.74714,-1.64007 4.71526,-1.64009 l 10.16855,0 0,-5.04328 c -7.95445,3e-5 -12.50569,0.082 -13.65374,0.24601 -1.03874,0.16404 -2.09113,0.42372 -3.15718,0.77905 -1.8041,0.62872 -3.30752,1.74945 -4.51024,3.36218 -1.03873,1.3941 -1.77677,3.04786 -2.21413,4.96127 -0.43735,1.85879 -0.65603,4.15491 -0.65603,6.88838 0,2.67882 0.6697,5.19363 2.00911,7.54441 1.55808,2.73349 3.79953,4.46925 6.72437,5.20729 0.082,0.0273 0.205,0.0547 0.36902,0.082 0.0273,0.0273 0.13666,0.0683 0.32801,0.12301 0.30068,0.082 0.56036,0.12301 0.77905,0.12301 l 0.94305,0.041 2.62414,0.12301 10.41457,0"
+         style=""
+         id="path8748" />
+    </g>
+    <g
+       inkscape:transform-center-y="3.424737"
+       style="font-size:41.00224686px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Newtown;-inkscape-font-specification:Newtown"
+       id="text5472-9">
+      <path
+         d="m 278.96688,699.3943 c -3e-5,-2.10477 -0.1367,-3.71752 -0.41002,-4.83826 -0.27338,-1.17539 -0.73807,-2.0501 -1.39408,-2.62415 l -0.90205,-0.73804 -0.69704,-0.53303 c -0.60139,-0.35533 -1.23009,-0.60135 -1.8861,-0.73804 l -0.86105,-0.16401 -0.98405,-0.123 -2.33713,-0.041 c -6.56037,2e-5 -10.22324,-0.25966 -10.9886,-0.77904 -0.73805,-0.57401 -1.10707,-1.46239 -1.10706,-2.66514 -10e-6,-1.20272 0.43735,-2.11843 1.31207,-2.74715 0.8747,-0.57401 2.0501,-0.86103 3.52619,-0.86105 l 15.29384,0 0,-5.28929 -16.27789,0 c -3.28019,3e-5 -5.76766,0.6424 -7.46241,1.9271 -1.91344,1.50345 -2.87016,4.03191 -2.87016,7.58542 0,3.55354 1.54442,5.93167 4.63326,7.13439 1.4214,0.54671 3.67652,0.82006 6.76537,0.82005 l 2.00911,-0.041 1.39407,0 c 3.3075,2e-5 5.31661,0.35537 6.02733,1.06606 0.13666,0.13669 0.24599,0.31436 0.32802,0.53303 0.13665,0.19135 0.21866,0.43737 0.24601,0.73804 0.082,0.32803 0.12299,0.94306 0.12301,1.8451 -2e-5,0.84739 -0.50572,1.53076 -1.51708,2.05011 -0.68339,0.35536 -1.77679,0.53304 -3.28018,0.53303 l -15.49885,0 0,5.28929 c 14.2961,0 22.27786,-0.6287 23.94531,-1.8861 1.91341,-1.42141 2.87013,-3.23917 2.87016,-5.4533"
+         style=""
+         id="path8745" />
+    </g>
+    <g
+       transform="matrix(1.0250562,0,0,1.0250562,128.04053,137.14381)"
+       mask="url(#mask5546-4)"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Newtown;-inkscape-font-specification:Newtown"
+       id="flowRoot3773-0-9">
+      <path
+         d="m 175.115,555.84392 0,-21.57 -6.63,0 -5.49,16.53 -5.46,-16.53 -6.66,0 0,21.57 4.65,0 -0.48,-16.92 5.64,16.92 4.83,0 5.49,-16.77 -0.36,16.77 4.47,0"
+         style="font-size:30px"
+         id="path8736" />
+      <path
+         d="m 182.83109,555.84392 0,-21.57 -4.74,0 0,21.57 4.74,0"
+         style="font-size:30px"
+         id="path8738" />
+      <path
+         d="m 203.69891,538.08392 0,-3.75 -18.57,0 0,3.75 6.9,0 0,17.76 4.71,0 0,-17.76 6.96,0"
+         style="font-size:30px"
+         id="path8740" />
+      <path
+         d="m 223.26312,555.84392 0,-21.57 -4.5,0 0,8.73 -8.31,0 0,-8.73 -4.53,0 0,21.57 4.53,0 0,-9.03 8.31,0 0,9.03 4.5,0"
+         style="font-size:30px"
+         id="path8742" />
     </g>
     <g
        id="g3361"
