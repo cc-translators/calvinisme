@@ -8,16 +8,6 @@
 
 \usepackage{calvinisme}
 
-\usepackage{tocloft}
-
-
-\renewcommand\cfttoctitlefont{\hfill\Huge\scshape}
-\renewcommand\cftaftertoctitle{\hfill}
-%\renewcommand\cftchappresnum{\scshape Section\ }
-\renewcommand\cftchapfont{\normalfont}
-\renewcommand\cftchappagefont{\normalfont}
-%\renewcommand\cftchapaftersnumb{\newline\vspace{-8pt}}
-\renewcommand\cftchapleader{\cftdotfill{1}}
 
 % Hyphenation tricks
 \renewcommand{\digestlinebreak}{\linebreak}
@@ -34,8 +24,6 @@
 
 \frontmatter
 \setlength{\parindent}{0em}
-%\includepdf{title_standalone.pdf}
-%\include{title}
 \includepdf{calvinisme_title}
 \pagestyle{empty}
 \include{copyright}
@@ -48,37 +36,14 @@
 
 \mainmatter
 \pagestyle{scrheadings}
-\lehead[]{Introduction}
-\rohead[]{Introduction}
 \pagenumbering{arabic}
-\titlespacing{\chapter}%
-  {0pt}{-5mm}{0pt}
-\titleformat{\chapter}%
-  {\chapstyle}{}{10pt}%
-  {}[\vspace{10mm}]
 \input{introduction}
-
-%\titleformat{\chapter}%
-%  {\chapstyle}{}{10pt}%
-%  {Section~\thechapter\\ }
-%  [\vspace{10mm}]
-
-\cleardoublepage
-\lehead[]{Section~\thechapter\hfill}
-\rohead[]{\hfill\chaphead}
 \input{section1}
 \input{section2}
 \input{section3}
 
 \backmatter
-\lehead[]{Index des références bibliques\hfill}
-\rohead[]{\hfill{}Index des références bibliques}
 \chindex
-\closeindex
-
-\cleardoublepage
-\tableofcontents
-\thispagestyle{empty}
 
 \pagestyle{empty}
 \clearpage

@@ -10,16 +10,11 @@
 \setmainfont[Mapping=tex-text]{Linux Libertine O}
 \newfontfamily\logofont{ChopinScript}
 \newfontface\pagemarkfont[Numbers={OldStyle}]{Linux Libertine O}
-\newfontfamily\headerfont{Linux Libertine Slanted O}
+\newfontfamily\headerfont[LetterSpace=10,WordSpace=5]{Linux Libertine O}
 \newfontfamily\sigfont{Linux Libertine Slanted O}
-\newfontfamily\chapfont{Linux Biolinum Slanted O}
+\newfontfamily\chapfont{Linux Libertine O}
+\newfontfamily\secfont{Linux Biolinum O}
 \newfontfamily\lettrinefont{Linux Libertine Initials O}
-%\newfontfamily\lettrinefont{Preciosa}
-%\newfontfamily\lettrinefont{Fancy Pants NF}
-%\newfontfamily\lettrinefont{Precious}
-%\newfontfamily\lettrinefont{Dobkin}
-%\newfontfamily\lettrinefont{Humanistic Cursive}
-%\newfontfamily\lettrinefont[Scale=0.5]{Baroque Script}
 
 \usepackage[breaklinks=true,unicode=true]{hyperref}
 \hypersetup{colorlinks,
@@ -36,15 +31,11 @@
 
 \usepackage[protrusion=true,final]{microtype}
 
-%\usepackage[T1]{fontenc}
-%\usepackage{libertine}
-
 \usepackage{parskip}
 \setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
-%\setlength{\parskip}{0.5\baselineskip}
 
 % ref index
-\newcommand{\indextitle}{Index des r\'ef\'erences bibliques}
+\newcommand{\indextitle}{Index des\\ r\'ef\'erences bibliques}
 \usepackage{imakeidx}
 \indexsetup{level=\chapter*}
 \makeindex[title=\indextitle,intoc,options=-s bibleref.ist,columns=2]
@@ -54,7 +45,7 @@
 
 % headers/footers
 \usepackage{scrpage2}
-\renewcommand{\headfont}{\headerfont}
+\renewcommand{\headfont}{\headerfont\scshape}
 \renewcommand{\pnumfont}{\pagemarkfont}
 
 % Get title
@@ -76,39 +67,26 @@
     \fi
     \oldchapter[#1]{#2}}
 
+\lehead[]{}
+\rohead[]{}
+\lefoot[]{}
+\rofoot[]{}
+\cfoot[\rule{6mm}{0.8pt}\\\pagemark]{\rule{6mm}{0.8pt}\\\pagemark}
+\cehead[]{Calvinisme, Arminianisme}
+\cohead[]{\& Parole de Dieu}
+
 \renewcommand*{\chapterpagestyle}{scrplain}
+\setheadsepline{.4pt}
+\pagestyle{scrheadings}
 
 \defpagestyle{chapterend}%
   {%
-    {Section~\thechapter\hfill}
-    {\hfill\chaphead}
+    {\hfill Calvinisme, Arminianisme\hfill}
+    {\hfill \& Parole de Dieu\hfill}
     {}
   }%
   {{}{}{}} % Nothing in footer
-
-\defpagestyle{introend}%
-  {%
-    {Introduction\hfill}
-    {\hfill{}Introduction}
-    {}
-  }%
-  {{}{}{}} % Nothing in footer
-
-\defpagestyle{indexend}%
-  {%
-    {Index des r\'ef\'erences bibliques\hfill}
-    {\hfill{}Index des r\'ef\'erences bibliques}
-    {}
-  }%
-  {{}{}{}} % Nothing in footer
-
 \newcommand{\closechapter}{\thispagestyle{chapterend}}
-\newcommand{\closeintro}{\thispagestyle{introend}}
-\newcommand{\closeindex}{\thispagestyle{indexend}}
-
-\setheadsepline{.4pt}
-
-\pagestyle{scrheadings}
 
 \renewcommand*{\thechapter}{\arabic{chapter}}
 
@@ -116,13 +94,10 @@
 \newcommand{\chindex}{%
   % Restore normal chapters
   \let\chapter\oldchapter
-  \titleformat{\chapter}%
-    {\centering\chapstyle}{}{10pt}%
-    {}%
-    [\vspace{8mm}]
   \renewcommand*{\BRbooktitlestyle}[1]{\textbf{\emph{##1}}\vadjust{\nobreak}}
   \cleardoublepage
   \printindex
+  \closechapter
 }
 
 % lettrines
@@ -151,7 +126,20 @@
 
 % sections
 \usepackage{titlesec}
-\newcommand{\chapstyle}{\chapfont\bfseries\huge}
+
+\titleformat{\chapter}[display]%
+  {\chapfont\huge\scshape}%
+  {}%
+  {10pt}%
+  {}
+
+\titleformat{\section}%
+  {\secfont\large\bfseries\scshape}%
+  {}%
+  {0pt}%
+  {}
+\titlespacing*{\section}
+  {0pt}{10pt}{0pt}
 
 % cadratin
 \newcommand*{\ocadr}{\mbox{---}\nobreak\,\nobreak}
@@ -167,3 +155,4 @@
 \newcommand{\digestpagebreak}{}
 
 \usepackage{pdfpages}
+
