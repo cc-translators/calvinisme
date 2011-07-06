@@ -13,8 +13,8 @@
    height="720"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.1 r9760"
-   sodipodi:docname="calvinisme_title.pdf">
+   inkscape:version="0.48.1 "
+   sodipodi:docname="calvinisme_title.svg">
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -22,16 +22,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.06"
-     inkscape:cx="207.21303"
-     inkscape:cy="326.74462"
+     inkscape:zoom="2.9981327"
+     inkscape:cx="194.90465"
+     inkscape:cy="327.17847"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1280"
-     inkscape:window-height="691"
-     inkscape:window-x="0"
-     inkscape:window-y="24"
+     inkscape:window-height="975"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
      inkscape:window-maximized="1"
      units="in" />
   <defs
@@ -661,7 +661,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -819,20 +819,9 @@
          sodipodi:role="line"
          id="tspan8799"
          x="126.97066"
-         y="709.09344">C</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Newtown;-inkscape-font-specification:Newtown"
-       x="113.46154"
-       y="734.66968"
-       id="text8801"
-       sodipodi:linespacing="125%"
-       mask="url(#mask9317)"
-       transform="translate(40.147972,-25.26359)"><tspan
-         sodipodi:role="line"
-         id="tspan8803"
-         x="113.46154"
-         y="734.66968">HUCK</tspan></text>
+         y="709.09344">C<tspan
+   style="font-size:30px"
+   id="tspan3158">HUCK</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Newtown;-inkscape-font-specification:Newtown"
@@ -843,19 +832,8 @@
          sodipodi:role="line"
          id="tspan9325"
          x="253.00381"
-         y="708.62634">S</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Newtown;-inkscape-font-specification:Newtown"
-       x="246.15385"
-       y="423.46155"
-       id="text9327"
-       sodipodi:linespacing="125%"
-       transform="translate(37.157308,285.83119)"
-       mask="url(#mask9335)"><tspan
-         sodipodi:role="line"
-         id="tspan9329"
-         x="246.15385"
-         y="423.46155">MITH</tspan></text>
+         y="708.62634">S<tspan
+   style="font-size:30px"
+   id="tspan3160">MITH</tspan></tspan></text>
   </g>
 </svg>
