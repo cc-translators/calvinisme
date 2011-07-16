@@ -6,10 +6,10 @@
 \usepackage{etoolbox}
 \patchcmd{\@bible@verse}{\@bv@idxsort{\csname br@#1\endcsname}}{\@bv@idxsort{#1}}
 
-
 \AtBeginDocument{\shorthandoff{:}}
 % Redefine chapter/verse separator
 \renewcommand*{\BRchvsep}{.}%
+\renewcommand*{\BRvsep}{,}%
 % We say "Esaïe" in the Colombe version
 \setbooktitle{Is}{Esaïe}%
 % We use Ecclésiaste instead of Qohélet
@@ -25,6 +25,7 @@
   \let\@bv@current@bkchsep\BRbkchsep
   \let\@bv@current@chvsep\BRchvsep
   \let\@bv@current@vrsep\BRvrsep
+  \let\@bv@current@vsep\BRvsep
   \def\@bv@restore{%
     \let\BRbooktitlestyle\@bv@current@titlestyle
     \let\BRchapterstyle\@bv@current@chapterstyle
@@ -32,6 +33,7 @@
     \let\BRbkchsep\@bv@current@bkchsep
     \let\BRchvsep\@bv@current@chvsep
     \let\BRvrsep\@bv@current@vrsep
+    \let\BRvsep\@bv@current@vsep
   }%
   \def\BRbooktitlestyle##1{}%
   \def\BRchapterstyle##1{}%
@@ -39,6 +41,7 @@
   \def\BRbkchsep{}%
   \def\BRchvsep{}%
   \def\BRvrsep{}%
+  \def\BRvsep{}%
   \def\@bv@idxpgformat{#1}%
   \@bv@idxtrue\def\@bv@idxentry{}\@bible@verse
 }
