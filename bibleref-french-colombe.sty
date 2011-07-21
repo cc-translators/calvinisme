@@ -3,9 +3,6 @@
 % bibleref settings
 \usepackage{bibleref-french}
 
-\usepackage{etoolbox}
-\patchcmd{\@bible@verse}{\@bv@idxsort{\csname br@#1\endcsname}}{\@bv@idxsort{#1}}
-
 \AtBeginDocument{\shorthandoff{:}}
 % Redefine chapter/verse separator
 \renewcommand*{\BRchvsep}{.}%
@@ -135,5 +132,7 @@
 \newcommand{\BRforbidhypbch}{\renewcommand*{\BRbkchsep}{~}}
 
 
+\usepackage{etoolbox}
+\patchcmd{\@bible@verse}{\@bv@idxsort{\csname br@#1\endcsname}}{\@bv@idxsort{#1}}
 
 
