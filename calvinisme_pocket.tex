@@ -9,12 +9,17 @@
 \usepackage{calvinisme}
 
 
+\renewcommand{\indextitle}{Index des\\r\'ef\'erences\\bibliques}
+
 % Hyphenation tricks
 \renewcommand{\pocketlinebreak}{\linebreak}
 \renewcommand{\pocketpagebreak}{\pagebreak}
 
 \renewenvironment{pocketpar}[1]{\par#1}{\par}
 
+\renewcommand{\signature}[1]{%
+\vspace{1cm}\parbox{2.5in}{\sigfont\raggedleft{\large{#1}}}
+}
 
 \newcommand{\isbn}{978-2-9539988-1-8}
 
