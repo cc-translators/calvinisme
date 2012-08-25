@@ -1,0 +1,47 @@
+\usepackage[utf8]{inputenc}
+
+% All paragraphs are indented
+\Css{h3 + p.noindent{
+text-indent:1em;
+}}
+
+% Guillemets
+\renewcommand{\Og}{\HCode{&laquo;&nbsp;}}
+\renewcommand{\Fg}{\HCode{&nbsp;&raquo;}}
+
+% French colon
+\renewcommand{\frcolon}{\HCode{&nbsp;:}}
+
+% Make links in Bible index
+\newcommand{\getversesec}[1]{%
+  \csname versesec#1\endcsname
+}
+
+\newcommand{\linkonepage}[1]{%
+  \ifthenelse{\secondparam=1}{, }{}%
+  \hyperlink{verse.#1}{\textrm{voir}}%
+  \def\secondparam{1}}
+\newcommand{\linkpages}[1]{%
+  \def\secondparam{0}%
+  \forcsvlist\linkonepage{#1}}
+\renewcommand*{\bvidxpgformat}{linkpages}
+
+% Make anchors in text
+\newcounter{bibleverse}
+\NewConfigure{ibibleverse}{2}
+\renewcommand*{\ibibleverse}[1][\bvidxpgformat]{%
+\stepcounter{bibleverse}%
+\a:ibibleverse\b:ibibleverse%
+\expandafter\xdef\csname versesec\thebibleverse\endcsname{\thesection}%
+\def\@bv@idxpgformat{#1}%
+\@bv@idxtrue\def\@bv@idxentry{}\bibleverse}
+
+\Configure{ibibleverse}{\Tg<a id="verse.\thebibleverse">}{\Tg</a>}
+
+% Patch imakeidx to map verse num instead of page
+\patchcmd{\@index}{\@wrindex}{\@Wrindex}{}{}
+\let\@Wrindex\@wrindex
+\patchcmd{\@Wrindex}{\thepage}{\thebibleverse}{}{}
+\let\protected@iwrite\protected@write
+\patchcmd{\protected@iwrite}{\write}{\immediate\write}{}{}
+\patchcmd{\@Wrindex}{\protected@write}{\protected@iwrite}{}{}
