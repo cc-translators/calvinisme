@@ -3,20 +3,47 @@
 \usepackage[french]{babel} %language selection
 \selectlanguage{french}
 
+% Wrapper for TeX4HT
+\newcommand{\Og}{\og}
+\newcommand{\Fg}{\fg{}}
+
+% colon, frenchb's definition
+\newcommand\frcolon{%
+      \ifhmode
+        \ifdim\lastskip>\z@
+          \unskip\penalty\@M\Fcolonspace
+        \else
+          \FDP@colonspace
+        \fi
+      \fi
+      \string:\space}
+
 %\usepackage[utf8x]{inputenc}
 % Set fonts
-\usepackage{fontspec}
-\usepackage{xunicode}
-\defaultfontfeatures{Mapping=tex-text}
-\setmainfont{Linux Libertine O}
-\newfontfamily\logofont{ChopinScript}
-\newfontface\pagemarkfont[Numbers={OldStyle}]{Linux Libertine O}
-\newfontfamily\headerfont[LetterSpace=20,WordSpace=5]{Linux Libertine O}
-\newfontfamily\sigfont{Linux Libertine Slanted O}
-\newfontfamily\chapfont{Linux Libertine O}
-\newfontfamily\secfont{Linux Biolinum O}
-\newfontfamily\lettrinefont{Linux Libertine Initials O}
-\newfontfamily\myversereffont{Linux Biolinum O}
+\usepackage{ifluatex}
+\ifluatex
+  \usepackage{fontspec}
+  \usepackage{xunicode}
+  \defaultfontfeatures{Ligatures=TeX}
+  \setmainfont{Linux Libertine O}
+  \newfontfamily\logofont{ChopinScript}
+  \newfontface\pagemarkfont[Numbers={OldStyle}]{Linux Libertine O}
+  \newfontfamily\headerfont[LetterSpace=20,WordSpace=5]{Linux Libertine O}
+  \newfontfamily\sigfont{LinLibertineSlantedOZ}
+  \newfontfamily\chapfont{Linux Libertine O}
+  \newfontfamily\secfont{Linux Biolinum O}
+  \newfontfamily\lettrinefont{LinLibertineIO}
+  \newfontfamily\myversereffont{Linux Biolinum O}
+\else
+  \newcommand\logofont{}
+  \newcommand\pagemarkfont{}
+  \newcommand\headerfont{}
+  \newcommand\sigfont{}
+  \newcommand\chapfont{}
+  \newcommand\secfont{}
+  \newcommand\lettrinefont{}
+  \newcommand\myversereffont{}
+\fi
 
 \usepackage[breaklinks=true,unicode=true]{hyperref}
 \hypersetup{colorlinks,

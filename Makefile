@@ -9,6 +9,16 @@ FTP_PDFDIR=$(FTP_TOPDIR)/pdf
 FTP_JSONDIR=$(FTP_TOPDIR)/json
 FTP_EBOOKDIR=$(FTP_TOPDIR)/ebooks
 
+# Ebook settings
+KINDLE_PATH=/documents/raphael
+AUTHOR=Chuck Smith
+LANGUAGE=fr
+PUBDATE=$(shell date +'%Y-%m-%d')
+COVER=calvinisme_title.pdf
+TITLE=Calvinisme, Arminianisme & Parole de Dieu
+
+EBOOK_CONVERT_OPTS=--authors "$(AUTHOR)" --title "$(TITLE)" --language "$(LANGUAGE)" --pubdate "$(PUBDATE)" --keep-ligatures --page-breaks-before "//*[name()='h1' or name()='h2']" --cover "$(COVER)" --use-auto-toc  --level1-toc "//*[name()='h2']" --level2-toc "//*[name()='h3']"
+
 # Include crocodoc conf
 include ~/.crocodoc.conf
 
@@ -28,8 +38,8 @@ json: pdf $(addsuffix .json,$(TARGETS))
 	sed -e 's@%$(LINENO_PATT)@$(LINENO_PATT)@' $< > $@
 
 %.pdf: %.tex
-	TEXINPUTS=$(TEXINPUTS) xelatex -shell-escape -interaction=batchmode $*
-	TEXINPUTS=$(TEXINPUTS) xelatex -shell-escape -interaction=batchmode $*
+	TEXINPUTS=$(TEXINPUTS) lualatex -shell-escape -interaction=batchmode $*
+	TEXINPUTS=$(TEXINPUTS) lualatex -shell-escape -interaction=batchmode $*
 
 %.dvi: %.tex
 	-TEXINPUTS=$(TEXINPUTS) latex -interaction=batchmode $<
@@ -41,15 +51,15 @@ json: pdf $(addsuffix .json,$(TARGETS))
 #	pdftohtml -noframes -enc UTF-8 -s -c $*.pdf
 
 %.html: %.tex
-	TEXINPUTS=$(TEXINPUTS) mk4ht htlatex $< \
-	   'xhtml,charset=utf-8' ' -cunihtf -utf8 -cvalidate'
+	TEXINPUTS=$(TEXINPUTS) htlatex $< \
+	   'ebook.cfg,xhtml,charset=utf-8' ' -cunihtf -utf8 -cvalidate'
 	./cleanuphtml.sh $@
 
 %.epub: %.html
-	ebook-convert $< $@
+	ebook-convert $< $@ $(EBOOK_CONVERT_OPTS)
 
 %.mobi: %.html
-	ebook-convert $< $@
+	ebook-convert $< $@ $(EBOOK_CONVERT_OPTS)
 	
 
 make-split: make-split-stamp
