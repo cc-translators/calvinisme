@@ -66,11 +66,13 @@
 \backmatter
 \chindex
 
-\pagestyle{empty}
-\include{depotlegal}
+\ifluatex
+  \pagestyle{empty}
+  \include{depotlegal}
 
-\clearpage
-\mbox{}
+  \clearpage
+  \mbox{}
+\fi
 
 
 \end{document}

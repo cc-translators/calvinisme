@@ -14,8 +14,19 @@ text-indent:1em;
 \ifvmode\IgnorePar\fi\EndP\HCode{<hr />}\IgnoreIndent
 }
 
+% Renew myverse
+\renewenvironment*{myverse}%
+  {\begin{center}\HRule}%
+  {\HRule\end{center}}
+
 % French colon
 \renewcommand{\frcolon}{\HCode{&nbsp;:}}
+
+% page breaks
+\renewcommand\pagebreak{%
+\HCode{<br class="pagebreak" />}
+}
+\renewcommand\pocketpagebreak{}
 
 % Make links in Bible index
 \newcommand{\getversesec}[1]{%
