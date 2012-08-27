@@ -17,7 +17,7 @@ PUBDATE=$(shell date +'%Y-%m-%d')
 COVER=calvinisme_cover_firstpage.jpg
 TITLE=Calvinisme, Arminianisme & Parole de Dieu
 
-EBOOK_CONVERT_OPTS=--authors "$(AUTHOR)" --title "$(TITLE)" --language "$(LANGUAGE)" --pubdate "$(PUBDATE)" --page-breaks-before "//*[name()='h1' or name()='h2']" --cover "$(COVER)" --use-auto-toc  --level1-toc "//*[name()='h2']" --level2-toc "//*[name()='h3']"
+EBOOK_CONVERT_OPTS=--authors "$(AUTHOR)" --title "$(TITLE)" --language "$(LANGUAGE)" --pubdate "$(PUBDATE)" --page-breaks-before "//*[name()='h1' or name()='h2']" --cover "$(COVER)" --use-auto-toc  --level1-toc "//*[name()='h2']" --level2-toc "//*[name()='h3']" --minimum-line-height=0.4 --font-size-mapping "12,12,14,16,18,20,26,64"
 
 # Include crocodoc conf
 include ~/.crocodoc.conf
