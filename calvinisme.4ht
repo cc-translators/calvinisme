@@ -23,7 +23,7 @@ text-indent:1em;
   {\HRule\end{center}}
 
 % French colon
-\renewcommand{\frcolon}{\HCode{&nbsp;:}}
+\renewcommand{\frcolon}{\HCode{&nbsp;: }}
 
 % page breaks
 \renewcommand\pagebreak{%
