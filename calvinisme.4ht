@@ -14,6 +14,9 @@ text-indent:1em;
 \ifvmode\IgnorePar\fi\EndP\HCode{<hr />}\IgnoreIndent
 }
 
+% Fake pdfpages
+%\newcommand\includepdf[1]{}
+
 % Renew myverse
 \renewenvironment*{myverse}%
   {\begin{center}\HRule}%
